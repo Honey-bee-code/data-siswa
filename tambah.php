@@ -2,12 +2,15 @@
 <html>
 <head>
     <title>Aplikasi Data Siswa</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-    <h2>Aplikasi Data Siswa</h2>
-    <p><a href="index.php">Beranda</a>
-        <a href="tambah.php">Tambah Data</a>
+<h2><strong>Aplikasi Data Siswa</strong></h2>
+    <p><a href="index.php" class="btn btn-outline-primary" style="width: 150px;">Beranda</a>
+        <a href="tambah.php" class="btn btn-outline-success" style="width: 150px;">Tambah Data</a>
+        <a href="report.php" class="btn btn-outline-danger" style="width: 150px;">Print PDF</a>
     </p>
+
     <h3>Tambah Data Siswa</h3>
     <form action="tambah-proses.php" method="post">
         <table cellpadding="3" cellspacing="0">
