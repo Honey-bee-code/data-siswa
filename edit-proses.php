@@ -10,7 +10,10 @@ if(isset($_POST['simpan'])) {
     $id         = $_POST['id']; // membuat variabel $id dan datanya dari inputan
     $nis        = $_POST['nis']; // membuat variabel $nis dan datanya dari inputan
     $nama       = mysql_real_escape_string($_POST['nama']); // membuat variabel $nama dan datanya dari inputan
-        strpos($nama, '<') or die ('nama tidak valid'); // anti SQL injection
+        $inj = strpbrk($nama, "<;");
+    if ($inj){
+        die ('nama tidak valid');
+    }
     $kelas      = $_POST['kelas']; // membuat variabel $kelas dan datanya dari inputan
     $jurusan    = $_POST['jurusan']; // membuat variabel $jurusan dan datanya dari inputan
 
